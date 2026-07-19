@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de Relógios & Smartwatches</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen font-sans">
+
+    <!-- HEADER (Topo do Site) -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <!-- Logotipo / Nome da Loja -->
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">⌚</span>
+                <h1 class="text-xl font-bold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
+                    Vitrine Real Time
+                </h1>
+            </div>
+
+            <!-- Informação de Alinhamento (Aviso rápido para o Cliente) -->
+            <p class="text-xs text-center sm:text-right text-gray-500 dark:text-gray-400 max-w-xs">
+                Escolha seu modelo e feche o pedido direto pelo WhatsApp com nossas vendedoras.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        
+        <!-- SEÇÃO DE FILTROS / CATEGORIAS -->
+        <section class="mb-10 flex justify-center gap-4">
+            <button id="btn-todos" class="px-5 py-2 rounded-full font-medium text-sm transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-500/30">
+                Todos
+            </button>
+            <button id="btn-relogios" class="px-5 py-2 rounded-full font-medium text-sm transition-all bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-750">
+                Relógios Tradicionais
+            </button>
+            <button id="btn-smart" class="px-5 py-2 rounded-full font-medium text-sm transition-all bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-750">
+                Smartwatches
+            </button>
+        </section>
+
+        <!-- CONTAINER DOS PRODUTOS (Onde os cards vão aparecer dinamicamente) -->
+        <section id="vitrine-produtos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Os cards de relógios vão entrar aqui via JavaScript na próxima etapa -->
+        </section>
+
+    </main>
+
+    <!-- Script de controle -->
+    <script src="script.js"></script>
+</body>
+</html>
